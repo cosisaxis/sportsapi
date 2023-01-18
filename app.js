@@ -8,3 +8,8 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
+
+const routes = require('./server/routes/yearRoutes.js');
+app.use('/', routes);
+
+app.listen(port, () => console.log(`listening on ${port}`));
