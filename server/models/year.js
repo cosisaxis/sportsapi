@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const yearSchema = new mongoose.Schema({
-    year:{
+    day:{
         type: Date,
         required: true
     },
-    description:{
+    event:{
         type: String,
         required: true
     },
